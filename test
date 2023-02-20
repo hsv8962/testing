@@ -1,0 +1,39 @@
+#Pascual Villar
+#CIS245-305J
+#Assignment 4.1
+
+#This program converts miles to kilometers
+
+def main(): 
+  #Display the intro
+  intro()
+  
+  try:
+  #user input the number of miles 
+    miles_nedded = float(input('Enter the number of miles:  ')) 
+    
+  #convert miles to kilometers
+    miles_to_kilometers(miles_needed)
+    
+  #user try again             
+  except:
+    print("An error occured, try again by entering number")
+    print()
+    main()
+
+  #intro function display intro screen
+def intro():
+  print(f"""
+\nThis program converts miles to kilometers.
+For reference, 1 mile = 1.60934 kilometers
+ """)
+  print()
+  
+  #calculates miles to kilometers and displays the total miles and kilometers to the screen
+def miles_to_kilometers(miles_needed):  
+  kilometers = miles * 1.60934
+  print(f'\nTotal miles: {miles}')
+  print(f'Total kilometers: {round(kilometers,2)}')
+
+  #Call the main function
+main()
